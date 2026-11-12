@@ -1,0 +1,4 @@
+# 由 `dsh plugin --profile <name> add <path>` 自动挂载；不要在 profile 的 cordis.patch.yml 里重复插入。
+- insert:
+    - id: ds-remotion-dashboard
+      name: 'ds-remotion-dashboard'

@@ -1,0 +1,26 @@
+{
+  "name": "ds-remotion-dashboard",
+  "version": "0.1.0",
+  "description": "DSH 插件：Remotion 动画模版库收集工作台——素材收集 → AI 解析 → AI 确认 → 人工确认 → 沉淀为可复用 Remotion 模版（源码 + 文档 + 预览 MP4）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "client", "cordis.patch.yml", "icon.svg", "README.md", "ARCHITECTURE.md"],
+  "repository": { "type": "git", "url": "git+https://github.com/VitoBeijing/ds-remotion-dashboard.git" },
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "keywords": ["dsh-plugin", "dsh", "remotion", "template", "animation"],
+  "license": "MIT",
+  "private": true,
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": ["@deepseek-ai/dsh-client-runtime"]
+    }
+  }
+}
